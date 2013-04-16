@@ -1,0 +1,5 @@
+name             'thrift'
+maintainer       'Tanner Donovan'
+maintainer_email 'ttdonovan@gmail.com'
+description      'Installs thrift from Apache GIT repository'
+depends          'build-essential'

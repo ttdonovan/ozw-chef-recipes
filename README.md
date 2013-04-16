@@ -56,3 +56,12 @@ system and using standard procedures to install that package.
 
     # remove all traces of the machine
     $ vagrant destroy
+
+## Chef
+
+### Run Chef-Solo
+
+    $ vagrant up
+    $ vagrant ssh
+    $ sudo su
+    $ chef-solo -j /etc/chef/node.js
