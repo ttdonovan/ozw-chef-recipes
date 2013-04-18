@@ -1,6 +1,6 @@
 include_recipe 'build-essential'
 
-%w{ libqt4-dev qt4-qmake cmake r-base-dev libcurl4-gnutls-dev }.each do |pkg|
+%w{ libtool libqt4-dev qt4-qmake cmake r-base-dev libcurl4-gnutls-dev }.each do |pkg|
   package pkg
 end
 
@@ -15,7 +15,7 @@ end
 execute 'build thrift' do
   cwd '/usr/git/thrift'
   command <<-EOF
-    (./bootstraph.sh) &&
+    (./bootstrap.sh) &&
     (./configure #{node[:thrift][:configure_options].join(' ')})
     (make install)
   EOF

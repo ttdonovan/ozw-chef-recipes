@@ -1,0 +1,5 @@
+name             'boost-stomp'
+maintainer       'Tanner Donovan'
+maintainer_email 'ttdonovan@gmail.com'
+description      'Installs BoostStomp from Github GIT repository'
+depends          'stompserver'

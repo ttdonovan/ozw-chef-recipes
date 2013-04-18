@@ -6,5 +6,7 @@ mkdir -p /usr/git
 mkdir -p /etc/chef
 echo 'cookbook_path "/cookbooks"' > /etc/chef/solo.rb
 echo '{
-  "run_list": ["recipe[thrift]"]
+  "run_list": [
+    "recipe[boost-stomp]"
+  ]
 }' > /etc/chef/node.json
