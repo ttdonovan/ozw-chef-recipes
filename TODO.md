@@ -4,6 +4,10 @@
 
 Install Thrift from Apache GIT repository. (http://thrift.apache.org/download/)
 
+* make && make install has errors but Thrift is installed,
+  the question how to handle with Chef
+* need to install C++ Bindings for Thrift 
+
 **stomp-recipe**
 
 Install STOMP server. (http://stomp.github.io/)
