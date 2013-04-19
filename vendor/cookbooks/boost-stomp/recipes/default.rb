@@ -1,12 +1,3 @@
-#
-# Cookbook Name:: boost-stomp
-# Recipe:: default
-#
-# Copyright (C) 2013 Tanner Donovan
-#
-# MIT
-#
-
 include_recipe 'stompserver'
 
 %w{

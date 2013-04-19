@@ -1,5 +1,5 @@
 namespace :whitespace do
-  FIND_FILE_BLACKLIST = "find . -type f \\( -iname Gemfile -or -iname Rakefile -or -iname Vagrantfile -or -iname '*.rake' -or -iname '*.rb' -or -iname '*.erb' -or -iname '*.sh' \\) | grep -v -e '.git/' -e '.vagrant/'"
+  FIND_FILE_BLACKLIST = "find . -type f \\( -iname Berksfile -or -iname Gemfile -or -iname Rakefile -or -iname Vagrantfile -or -iname '*.md' -or -iname '*.rake' -or -iname '*.rb' -or -iname '*.erb' -or -iname '*.sh' \\) | grep -v -e '.git/' -e '.vagrant/'"
 
   desc 'Runs all whitespace tasks'
   task :all do

@@ -1,3 +1,12 @@
+#
+# Cookbook Name:: thrift
+# Recipe:: default
+#
+# Copyright (C) 2013 Tanner Donovan
+#
+# MIT
+#
+
 include_recipe 'build-essential'
 
 %w{ libtool libqt4-dev qt4-qmake cmake r-base-dev libcurl4-gnutls-dev }.each do |pkg|

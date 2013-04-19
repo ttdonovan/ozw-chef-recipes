@@ -2,6 +2,8 @@
 # vi: set ft=ruby :
 
 Vagrant.configure('2') do |config|
+  config.vm.hostname = 'ozw-devel'
+
   config.vm.box = 'squeeze64-ruby193'
   config.vm.box_url = 'http://packages.diluvia.net/squeeze64-ruby193.box'
 
@@ -24,9 +26,9 @@ Vagrant.configure('2') do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   # config.vm.synced_folder '../data', '/vagrant_data'
-  config.vm.synced_folder './cookbooks', '/cookbooks'
 
-  config.vm.provision :shell, :path => 'bootstrap.sh'
+  # config.vm.provision :shell, :path => 'bootstrap.sh'
+  config.berkshelf.enabled = true
 
   # Enable provisioning with chef solo, specifying a cookbooks path, roles
   # path, and data_bags path (all relative to this Vagrantfile), and adding

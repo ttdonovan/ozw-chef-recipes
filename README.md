@@ -20,12 +20,22 @@ Vagrant and VirtualBox.
 
 ### Required Software
 
+#### Berkshelf
+
+[Berkshelf](http://berkshelf.com/), manage a Cookbook or an Application's
+Cookbook dependencies. Installed through Bundler (`bundle install`).
+
 #### Vagrant
 
 [Vagrant](http://www.vagrantup.com/), create and configure lightweight,
 reproducible, and portable development environments.
 [Vagrant](http://downloads.vagrantup.com/) can be installed by downloading the
 installer for your operating system.
+
+#### Vagrant Berkshelf (Vagrant plugin)
+
+[vagrant-berkshelf](https://github.com/RiotGames/vagrant-berkshelf), a Vagrant
+plugin to add Berkshelf integration to the Chef provisioners.
 
 #### VirtualBox
 
