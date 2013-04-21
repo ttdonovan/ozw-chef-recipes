@@ -9,7 +9,6 @@
 
 package 'gccxml'
 
-# mongrel
 %w{
   gccxml_gem
   rspec

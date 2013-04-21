@@ -28,6 +28,7 @@ git 'checkout BoostStomp code' do
   reference 'master'
   action :checkout
   destination '/usr/git/BoostStomp'
+  not_if { ::File.exists?('/usr/git/BoostStomp') }
 end
 
 execute 'build BoostStomp' do

@@ -1,4 +1,5 @@
 {"run_list": [
   "recipe[boost-stomp]",
-  "recipe[gccxml]"
+  "recipe[gccxml]",
+  "recipe[open-zwave]"
 ]}

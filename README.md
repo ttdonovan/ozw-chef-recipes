@@ -69,6 +69,10 @@ system and using standard procedures to install that package.
 
 ## Vagrant and Chef
 
+### Fix permissions for SSH .chef/vagrant.key
+
+    $ chmod 600 .chef/vagrant.key
+
 ### Berks, Knife and Chef-Solo
 
     $ berks install --path ./vendor/cookbooks
