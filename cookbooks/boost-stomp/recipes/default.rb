@@ -18,11 +18,17 @@ include_recipe 'stompserver'
   package pkg
 end
 
+execute 'create git dir' do
+  command 'mkdir -p /usr/git'
+  not_if { ::File.exists?('/usr/git') }
+end
+
 git 'checkout BoostStomp code' do
   repository 'git://github.com/ekarak/BoostStomp.git'
   reference 'master'
   action :checkout
   destination '/usr/git/BoostStomp'
+  not_if { ::File.exists?('/usr/git/BoostStomp') }
 end
 
 execute 'build BoostStomp' do

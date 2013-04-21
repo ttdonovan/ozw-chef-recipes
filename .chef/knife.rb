@@ -1,3 +1,4 @@
+node_name "solo"
 cookbook_path ["vendor/cookbooks", "cookbooks", "site-cookbooks"]
 role_path     "roles"
 data_bag_path "data_bags"

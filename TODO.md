@@ -3,7 +3,6 @@
 **Berkshelf**
 
 * comment out `bootstrap.sh` provision file in ./Vagrantfile to test vagrant-berkshelf plugin.
-* finish setup of http://berkshelf.com/ and update ./Vagrantfile (hostname owz-devel).
 
 **thrift-recipe**
 

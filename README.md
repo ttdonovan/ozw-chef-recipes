@@ -67,11 +67,10 @@ system and using standard procedures to install that package.
     # remove all traces of the machine
     $ vagrant destroy
 
-## Chef
+## Vagrant and Chef
 
-### Run Chef-Solo
+### Berks, Knife and Chef-Solo
 
-    $ vagrant up
-    $ vagrant ssh
-    $ sudo su
-    $ chef-solo -j /etc/chef/node.js
+    $ berks install --path ./vendor/cookbooks
+    $ knife solo prepare --identity-file .chef/vagrant.key vagrant@33.33.33.10
+    $ knife solo cook --identity-file .chef/vagrant.key vagrant@33.33.33.10
