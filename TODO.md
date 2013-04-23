@@ -1,17 +1,15 @@
 # TODO
 
-**Berkshelf**
+**Cookbooks**
 
-* comment out `bootstrap.sh` provision file in ./Vagrantfile to test vagrant-berkshelf plugin.
+* test and fix the individual cookbooks, as is all runs fine using the root
+./Vagrantfile
 
 **thrift-recipe**
 
-Install Thrift from Apache GIT repository. (http://thrift.apache.org/download/)
-
-* temporarily removed 'thrift' from Berksfile
-* make && make install has errors but Thrift is installed,
-  the question how to handle with Chef
-* need to install C++ Bindings for Thrift
+* FIXME in thrift's default.rb -- make && make install has errors but Thrift
+is installed
+* replace the thrift 0.9 with thrift from GIT source
 
 **thrift4ozw-recipe**
 

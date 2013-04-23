@@ -21,11 +21,15 @@ git 'checkout thrift code' do
   not_if { ::File.exists?('/usr/local/bin/thrift') }
 end
 
+# FIXME: address the `build thrift` erros
+# thift `make && make install` returns errors
+# but everything seems to have compiled fine
 execute 'build thrift' do
   cwd '/usr/git/thrift'
   command <<-EOF
     (./bootstrap.sh) &&
-    (./configure #{node[:thrift][:configure_options].join(' ')})
+    (./configure #{node[:thrift][:configure_options].join(' ')}) &&
+    (make) &&
     (make install)
   EOF
   not_if { ::File.exists?('/usr/local/bin/thrift') }

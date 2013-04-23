@@ -28,7 +28,6 @@ Vagrant.configure('2') do |config|
   # argument is a set of non-required options.
   # config.vm.synced_folder '../data', '/vagrant_data'
 
-  # config.vm.provision :shell, :path => 'bootstrap.sh'
   config.berkshelf.enabled = true
 
   # Enable provisioning with chef solo, specifying a cookbooks path, roles
