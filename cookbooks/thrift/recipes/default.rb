@@ -17,7 +17,7 @@ git 'checkout thrift code' do
   repository 'https://git-wip-us.apache.org/repos/asf/thrift.git'
   reference 'master'
   action :checkout
-  destination '/usr/git/thrift'
+  destination '/usr/src/thrift'
   not_if { ::File.exists?('/usr/local/bin/thrift') }
 end
 
@@ -25,7 +25,7 @@ end
 # thift `make && make install` returns errors
 # but everything seems to have compiled fine
 execute 'build thrift' do
-  cwd '/usr/git/thrift'
+  cwd '/usr/src/thrift'
   command <<-EOF
     (./bootstrap.sh) &&
     (./configure #{node[:thrift][:configure_options].join(' ')}) &&

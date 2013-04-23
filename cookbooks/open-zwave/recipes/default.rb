@@ -14,21 +14,21 @@
   package pkg
 end
 
-execute 'create svn dir' do
-  command 'mkdir -p /usr/svn'
-  not_if { ::File.exists?('/usr/svn') }
+execute 'create src dir' do
+  command 'mkdir -p /usr/src'
+  not_if { ::File.exists?('/usr/src') }
 end
 
 execute 'checkout Open ZWave code' do
-  cwd '/usr/svn'
+  cwd '/usr/src'
   command <<-EOF
     (svn checkout http://open-zwave.googlecode.com/svn/trunk/ open-zwave-read-only)
   EOF
-  not_if { ::File.exists?('/usr/svn/open-zwave-read-only') }
+  not_if { ::File.exists?('/usr/src/open-zwave-read-only') }
 end
 
 execute 'make Open ZWave' do
-  cwd '/usr/svn/open-zwave-read-only/debian'
+  cwd '/usr/src/open-zwave-read-only/debian'
   command <<-EOF
     (ln -s ../cpp cpp) &&
     (make)
