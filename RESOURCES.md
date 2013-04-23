@@ -7,3 +7,4 @@
 * https://code.google.com/p/open-zwave/
 
 * https://github.com/ttdonovan/Thrift4OZW/blob/master/INSTALL.txt
+* https://github.com/ttdonovan/Thrift4OZW/blob/master/README-OpenZWave.txt
